@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
         img: 'images/dobby.png'
       },
       {
-        name: 'dumbeldore',
-        img: 'images/dumbeldore.png'
+        name: 'Dumbeldore',
+        img: 'images/Dumbeldore.png'
       },
       {
-        name: 'dumbeldore',
-        img: 'images/dumbeldore.png'
+        name: 'Dumbeldore',
+        img: 'images/Dumbeldore.png'
       },
       {
         name: 'Hagrid',
