@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
         name: 'Harrypotter',
-        img: 'images/Harrypotter'
+        img: 'images/Harrypotter.png'
       },
       {
         name: 'Hermoine',
