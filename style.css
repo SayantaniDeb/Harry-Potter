@@ -18,12 +18,26 @@ height: 100vh;
     max-width: 250px;
     height: auto;
 }
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.icons img{
+    max-width: 40%;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .middle{
     text-align: center;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -36,6 +50,14 @@ height: 100vh;
     
     align-items: center;
     transition: transform .2s;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    
 
 }
 .text:hover {
@@ -43,7 +65,7 @@ height: 100vh;
 }
 
 .token{
-    max-width: 20%;
+    max-width: 50%;
     height: auto;
     align-items: center;
     transition: transform .2s;
@@ -58,17 +80,19 @@ height: 100vh;
     background-color: rgb(224, 224, 40);
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 800;
-  margin: 4px 2px;
+  margin: 10px 20px;
   cursor: pointer;
   transition: transform .2s;
   margin: 20px 0px;
+  max-width: 50%;
+  align-items: center;
 }  
 .button a{
       text-decoration: none;
@@ -109,9 +133,14 @@ height: 100vh;
     .bg {
       background-image: url(./images/hogwarts.jpg);
     }
-    .middle{
-        padding: 150px 0px;
+    .middle,.icons,.options{
+        padding: 10px 0px;
         max-width: fit-content;
+        
+    }
+    .middle{
+        display: flex;
+        flex-direction: column-reverse;
     }
     .token{
         max-width: 100px;
@@ -119,12 +148,16 @@ height: 100vh;
     }
     .text{
         max-width: 350px;
+        padding: 50px 0px;
+        max-width: fit-content;
+        
 
     }
     .button{
         width: 100px;
         padding: 15px 0px;
-        margin: 4px 0px;
+        margin: 4px 2px;
+        font-size: small;
     }
 
 
