@@ -1,0 +1,33 @@
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 300px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+:root{
+    cursor: url("./images/cursorwand.png"),auto;
+}
+
+.h1{
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  width: 250px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    :root{
+     cursor: url("./images/cursorwand.png"),auto;
+    }
+  }
+  

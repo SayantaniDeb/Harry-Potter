@@ -1,33 +1,98 @@
+body{
+    background-image: url(./images/background.jpg) ;
+    background-repeat: no-repeat;
+background-size: cover;
+}
 
-
-.grid {
+.middle{
+    text-align: center;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    width: 800px;
-    height: 300px;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    
 
-:root{
-    cursor: url("./images/cursorwand.png"),auto;
 }
 
-.h1{
-    margin-left: auto;
-  margin-right: auto;
-  display: block;
+.text{
+    width: 700px;
+    
+    align-items: center;
+    transition: transform .2s;
+
+}
+.text:hover {
+    transform: scale(0.9);
+}
+
+.token{
+    max-width: 20%;
+    height: auto;
+    align-items: center;
+    transition: transform .2s;
+    padding-top: 60px;
+
+}
+.token:hover {
+    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.button{
+    background-color: rgb(224, 224, 40);
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
-  justify-content: center;
-  width: 250px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: transform .2s;
+  margin: 20px 0px;
+}  
+.button a{
+      text-decoration: none;
+      color: black;
+      
+  }
 
+  .button:hover{
+    transform: scale(1.0);
+    background-color: silver;
+
+  }
+  :root{
+    cursor: url("./images/cursor.png"),auto;
 }
 
+.loop{
+    display:none;
+}
 @media only screen and (max-width: 600px) {
-    :root{
-     cursor: url("./images/cursorwand.png"),auto;
+    body {
+      background-image: url(./images/hogwarts.jpg);
     }
+    .middle{
+        padding: 150px 0px;
+    }
+    .token{
+        max-width: 100px;
+        
+    }
+    .text{
+        max-width: 350px;
+
+    }
+    .button{
+        width: 100px;
+        padding: 15px 0px;
+        margin: 4px 0px;
+    }
+
+
   }
-  
