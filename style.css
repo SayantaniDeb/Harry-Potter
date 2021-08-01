@@ -1,7 +1,22 @@
-body{
-    background-image: url(./images/background.jpg) ;
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.bg{
+    background: url(./images/background.jpg) ;
+    background-position: center;
     background-repeat: no-repeat;
 background-size: cover;
+height: 100vh;
+
+
+}
+.box
+{
+    display: flex;
+    max-width: 250px;
+    height: auto;
 }
 
 .middle{
@@ -68,17 +83,35 @@ background-size: cover;
   }
   :root{
     cursor: url("./images/cursor.png"),auto;
+    --X:40vh;
+    --Y:45vh;
+}
+:root::before{
+    content: '';
+    display: block;
+    height:100%;
+    width: 100%;
+    position: fixed;
+    background: radial-gradient(circle 10vmax at var(--X) var(--Y),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.7) 80%,
+    rgba(0,0,0,0.95) 100%);
+    pointer-events:none;
 }
 
 .loop{
     display:none;
 }
+
+
+
 @media only screen and (max-width: 600px) {
-    body {
+    .bg {
       background-image: url(./images/hogwarts.jpg);
     }
     .middle{
         padding: 150px 0px;
+        max-width: fit-content;
     }
     .token{
         max-width: 100px;

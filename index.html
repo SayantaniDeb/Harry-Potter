@@ -6,33 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body> 
+<body>
+    <section class="bg">
     
     <div class="middle">
     <img src="./images/text.png" alt="" class="text">
 
-        <img src="./images/goblet.png" class="token" alt=""><a href="index2.html">
+        <img src="./images/goblet.png" class="token" alt="">
+        
         
         <button class="button"> 
-        Start
-    </a>
-
-    <audio controls autoplay
-    src="theme.mp3" class="loop">
-        
-
-    </audio>
+            <a href="index2.html"> Start</a>
+       
     
+</button> </div>
+
+<script>
+    function move(event){
+        let X = event.clientX || event.touches[0].clientX;
+        let Y = event.clientY || event.touches[0].clientY;
+        document.documentElement.style.setProperty('--X',X+'px');
+        document.documentElement.style.setProperty('--Y',Y+'px');
+    }
+
+    document.addEventListener('mousemove',move);
+    document.addEventListener('touchpad',move);
+</script>
     
 
-    </button> </div>
-    
-
-    
+  </section>  
     
 </body>
 </html>
