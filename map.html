@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treasure Hunt</title>
     <link rel="stylesheet" href="map.css">
-    <link rel="stylesheet" href="all.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="all.min.css">
+
 </head>
 <body>
     <section class="bg">
@@ -20,7 +20,7 @@
         <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
         <button class="goback"><a href="./index.html"><i class="fas fa-home"></i></a></button> 
       </div>
-      <audio
+      <audio autoplay
        loop
       src="memory.mp3" id="player">
           Your browser does not support the
