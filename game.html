@@ -6,7 +6,7 @@
 
  <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/pure-min.css">
  <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-
+<link rel="stylesheet" href="all.css">
  <style>
      @import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
 
@@ -36,11 +36,15 @@ html, body, #quizzie {
 }
 
 body {
-    background: #0c0c0c;
+    background: rgba(39, 26, 26, 0.714) url(./images/sorting.jpg) ;
+    background-blend-mode: darken;
+    
     background-attachment: fixed;
     background-repeat: no-repeat;;
     background-position: center;
     color: #fff;
+    background-size: cover;
+
 }
 
 h1 {
@@ -54,6 +58,7 @@ h1 {
 h2 {
  text-shadow: 2px 2px #d3a625;
  letter-spacing: .02em;
+ 
 }
 
 h2, p {
@@ -68,6 +73,49 @@ h1, h2, p {
   display: block;
   width: auto;
   margin: 1%;
+}
+.player{
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 25%;
+  height: max-content;
+  
+}
+.play,.pause,.volup,.voldown,.goback{
+  background-color:black;
+  box-shadow: rgb(224, 224, 40);
+  color: gold;
+  font-size: medium;
+  
+  border: black;
+  width: 15%;
+  padding: 10px 10px;
+  margin: 2px 4px;
+  transition: transform 0.5s;
+}
+.play:hover,.pause:hover,.volup:hover,.voldown:hover,.goback:hover{
+transform: scale(1.0);
+background-color: rgb(206, 210, 233);
+color: black;
+
+}
+.play{
+  font-size: small;
+  padding: 11px 10px;
+
+}
+.volup{
+  padding: 10px 10px 10px 5px;
+}
+.voldown{
+  font-size: large;
+  padding: 9px 10px;
+
+}
+.fa-home{
+    text-decoration: none;
+    color: gold;
 }
 
 #quizzie {
@@ -148,10 +196,19 @@ h1, h2, p {
      </style>
 
 
- <title> Assignment 02 jQuery – Michael Bergmann </title>
+ <title>House Quiz</title>
 </head>
 
 <body>
+    <div class="player"> 
+        <button class="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
+        <button class="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
+        <button class="volup" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
+        <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
+        <button class="goback"><a href="./index.html"><i class="fas fa-home"></i></a></button> 
+      </div>
+      <audio  autoplay loop  id="player"
+      src="harry_potter_theme.mp3"></audio>
 
 <div id="quizzie">
   <h1> Hogwarts Sorting Hat Quiz </h1>

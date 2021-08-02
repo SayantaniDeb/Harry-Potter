@@ -7,35 +7,66 @@
     <title>Document</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <section class="bg">
+    <div class="player"> 
+        <button class="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
+        <button class="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
+        <button class="volup" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
+        <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
+      </div>
+      <audio  autoplay loop  id="player"
+      src="home.mp3"></audio>
+      
+      
+
+
         <img src="./images/text.png" alt="" class="text">
+
+       
+
+       
+            
     <div class="middle">
 
 <div class="icons">
-        <img src="./images/goblet.png" class="token" alt="">
+        <img src="./images/memo.png" class="token memo" alt="">
         <button class="button"> 
 
-            <a href="index2.html"> Start</a>
+            <a href="index2.html">Memory Game</a>
        
     
 </button> 
-        
-        </div>
+</div>
         <div class="options">
             <img src="./images/badge.png" class="token">
         
 
 <button class="button"> 
-    <a href="index3.html">House</a>
+    <a href="index3.html">Get your House</a>
+
+    
 
 
 </button>
 </div> 
+<div class="options">
+    <img src="./images/map.png" class="token">
+
+
+<button class="button"> 
+<a href="map.html">Treasure Hunt</a>
+
+
+
+
+</button>
+</div> 
+
+
 
 </div>
 
@@ -54,8 +85,6 @@
 
   </section>  
 
-  <audio controls autoplay class="loop"
-  src="harry_potter_theme.mp3"></audio>
-    
+ 
 </body>
 </html>

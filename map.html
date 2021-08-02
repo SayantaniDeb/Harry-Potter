@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <section class="bg">
+
+
+    <div class="player"> 
+        <button class="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
+        <button class="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
+        <button class="volup" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
+        <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
+        <button class="goback"><a href="./index.html"><i class="fas fa-home"></i></a></button> 
+      </div>
+      <audio
+      autoplay loop
+      src="memory.mp3" id="player">
+          Your browser does not support the
+           element.
+    </audio>
+
+<h1>
+    move your wand around and look for the hidden objects!
+</h1>
+    <div>
+
+        <img src="">
+        </div>
+            <script>
+        function move(event){
+            let X = event.clientX || event.touches[0].clientX;
+            let Y = event.clientY || event.touches[0].clientY;
+            document.documentElement.style.setProperty('--X',X+'px');
+            document.documentElement.style.setProperty('--Y',Y+'px');
+        }
+    
+        document.addEventListener('mousemove',move);
+        document.addEventListener('touchpad',move);
+    </script>
+
+    </section>
+</body>
+</html>

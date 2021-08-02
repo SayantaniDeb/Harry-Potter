@@ -4,7 +4,7 @@
 }
 
 .bg{
-    background: url(./images/background.jpg) ;
+    background: url(./images/meow.jpg) ;
     background-position: center;
     background-repeat: no-repeat;
 background-size: cover;
@@ -53,7 +53,7 @@ height: 100vh;
     text-align: center;
     margin: auto;
     display: flex;
-    padding: 10px 0px;
+    padding: 0px 0px;
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -69,7 +69,7 @@ height: 100vh;
     height: auto;
     align-items: center;
     transition: transform .2s;
-    padding-top: 60px;
+    padding-top: 50px;
 
 }
 .token:hover {
@@ -123,13 +123,54 @@ height: 100vh;
     pointer-events:none;
 }
 
-.loop{
-    display:none;
+.player{
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 25%;
+    height: max-content;
+    
+}
+.play,.pause,.volup,.voldown{
+    background-color:black;
+    box-shadow: rgb(224, 224, 40);
+    color: gold;
+    font-size: medium;
+    border: black;
+    width: 15%;
+    padding: 10px 10px;
+    margin: 2px 4px;
+    transition: transform 0.5s;
+}
+.play:hover,.pause:hover,.volup:hover,.voldown:hover{
+    transform: scale(1.0);
+    background-color: rgb(206, 210, 233);
+    color: black;
+    
+    }
+.play{
+    font-size: small;
+    padding: 11px 10px;
+
+}
+.volup{
+    padding: 10px 10px 10px 5px;
+}
+.voldown{
+    font-size: large;
+    padding: 9px 10px;
+
 }
 
 
 
+
 @media only screen and (max-width: 600px) {
+    :root{
+        
+
+    }
+    
     .bg {
       background-image: url(./images/hogwarts.jpg);
     }
@@ -141,24 +182,40 @@ height: 100vh;
     .middle{
         display: flex;
         flex-direction: column-reverse;
+        padding: 0%;
+
     }
     .token{
-        max-width: 100px;
+        max-width: 60px;
+        padding: 0px 0px;
         
     }
+    .icons{
+        max-width: 100%;
+    }
+
+        
+    
     .text{
-        max-width: 350px;
-        padding: 50px 0px;
+        max-width: 550px;
+        padding: 20px 0px;
         max-width: fit-content;
         
 
     }
     .button{
         width: 100px;
-        padding: 15px 0px;
-        margin: 4px 2px;
+        padding: 5px 0px;
+        margin: 4px 50px;
         font-size: small;
     }
-
+    .player{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+:root::before{
+    display: none;
+}
 
   }
