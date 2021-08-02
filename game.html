@@ -1,0 +1,338 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel='shortcut icon' type='image/x-icon' href='/~mi372871/dig4503/assignments/assignment02/img/favicon.jpg' />
+ <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+
+ <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+ <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+ <style>
+     @import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+
+@font-face {
+    font-family: 'harryp';
+    src: url('harryp-webfont.eot');
+    src: url('harryp-webfont.eot?#iefix') format('embedded-opentype'),
+         url('harryp-webfont.woff2') format('woff2'),
+         url('harryp-webfont.woff') format('woff'),
+         url('harryp-webfont.ttf') format('truetype'),
+         url('harryp-webfont.svg#harry_pregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Defaults */
+html, body, #quizzie {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background: #0c0c0c;
+    background-attachment: fixed;
+    background-repeat: no-repeat;;
+    background-position: center;
+    color: #fff;
+}
+
+h1 {
+  font-family: 'harryp';
+  font-size: 5.5em;
+  letter-spacing: .04em;
+  text-shadow: 2px 2px #000;
+  color: #d3a625;
+}
+
+h2 {
+ text-shadow: 2px 2px #d3a625;
+ letter-spacing: .02em;
+}
+
+h2, p {
+  
+  font-size: 2em;
+  text-shadow: 1px 1px gold;
+	color: white;
+}
+
+h1, h2, p {
+  text-align: center;
+  display: block;
+  width: auto;
+  margin: 1%;
+}
+
+#quizzie {
+  padding: 5% 0;
+}
+
+#quizzie ul {
+  list-style: none;
+  display: block;
+  width: auto;
+  margin: 2% 2%;
+  padding: 2%;
+  overflow: auto;
+  display: none;
+}
+
+#quizzie ul.current {
+  display: block;
+}
+
+#quizzie ul li {
+  display: inline-block;
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  overflow: auto;
+  text-align: center;
+}
+
+#quizzie ul li.quiz-answer {
+  cursor: pointer;
+}
+
+#quizzie ul li.question, #quizzie ul li.results-inner {
+  display: block;
+  float: none;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2%;
+}
+
+#quizzie ul li.results-inner {
+  padding: 5% 2%;
+}
+
+#quizzie ul li:last-child {
+  margin-right: 0;
+}
+
+#quizzie .question-wrap, #quizzie .answer-wrap {
+  display: block;
+  padding: 1%;
+  margin: 1em 10%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+}
+
+#quizzie .answer-wrap {
+  background: #d3a625;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+#quizzie .answer-wrap:hover {
+  background: #ae0001;
+  color: aliceblue;
+
+    }
+    
+
+    
+
+
+     </style>
+
+
+ <title> Assignment 02 jQuery – Michael Bergmann </title>
+</head>
+
+<body>
+
+<div id="quizzie">
+  <h1> Hogwarts Sorting Hat Quiz </h1>
+    <ul class="quiz-step step1 current">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #1: There is a three-headed dog between you and your best friend, what do you do next?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Try to take on the dog myself, distracting it's view from my friend.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text"> I use my exceptional broom flying skills to zoom past the dog - leaving my friend in despair.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step2">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #2: You find yourself standing at a mysterious locked door, what do you do?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Leave the door alone and act like it doesn't exist.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Come back later when no one is around and try to find your way through it.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step3">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #3: Where do you see yourself working?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">In a warm, dry library.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Alone in a cold, dark dungeon.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step4">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #4: If you had to choose one potion to use for the rest of your life, which would it be?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Elixir to Induce Euphoria - A potion that induces a sense of inexplicable, irrational happiness upon the drinker.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Forgetfulness Potion - A potion that makes the taker overly forgetful.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step5">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #5: You have a big exam tomorrow, how do you prepare?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Study profusely and don't sleep at all.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Do nothing.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step6">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #6: While shopping in Diagon Alley you realize you were undercharged when purchasing a wand from Ollivanders. What do you do?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Return to Ollivanders and give Mr. Garrick the difference. </p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Keep the money - use it for Bertie Bott's Beans. </p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step7">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #7: Choose one of the following pets for a companion:</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">An owl - bird of prey.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">A Cat - a domesticated creature for both Wizards and Muggles.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step8">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #8: If you could bring back memories with one smell, what would it be? </h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">The smell of a delicious, large pepperoni pizza.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">The putrid smell of sweaty feet.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step9">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #9: Your close friend is being held by Death Eaters in the basement dungeon of the Malfoy mansion. You:</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Gather together Dumbledore's Army and prepare to fight your way through the dungeon.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Leave your friend to be devoured by the Death Eaters.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step10">
+        <li class="question">
+            <div class="question-wrap">
+                <h2>Question #10: Severus Snape: Friend or Foe?</h2>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+            <div class="answer-wrap">
+                <p class="answer-text">Foe: Snape has always disliked Harry.</p>
+            </div>
+        </li>
+        <li class="quiz-answer high-value" data-quizIndex="4">
+            <div class="answer-wrap">
+                <p class="answer-text">Friend: Dumbledore had no doubt that Snape was trustworthy</p>
+            </div>
+        </li>
+    </ul>
+    <ul id="results">
+        <li class="results-inner">
+            <p>Your result is:</p>
+            <p class="desc"></p>
+        </li>
+    </ul>
+</div>
+<script src="game.js"></script>
+
+</body>
+</html>

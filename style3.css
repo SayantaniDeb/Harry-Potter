@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Nova Square', cursive;
+
 }
 .bg {
-    font-family: Open Sans;
+    
     background-image: url(./images/dine.jpg);
     background-size: cover;
     height: 100vh;
@@ -14,18 +19,78 @@
 
 h1 {
     text-align: center;
+    font-size: 5.4rem;
+    color: silver;
 }
 
-#title {
+.h2{
+    font-size: 4.2rem;
+    margin-bottom: 4 rem;;
+
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 88rem;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-direction: column;
+
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+
+}
+.justify-center{
+    justify-content: center;
+
+}
+
+.text-center{
+    text-align: center;
+
+}
+
+.hidden{
+    display: none;
+}
+.btn{
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
     text-decoration: none;
+    color: rgb(230, 217, 102);
+    background: linear-gradient(90deg,rgb(rgb241, 210, 30) 0%, rgb(241, 210, 30)100%);;
+    border-radius: 4px;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow:0 0.4rem 1.4rem 0 rgb(241, 210, 30);
+    transition: transform 150ms;
+    transform: scale(1.03);
+
 }
 .hat{
-    display: flex;
+    
     transition: transform .2s;
     align-items: center;
     justify-content: center;
-    margin:auto; 
-    padding: 10px 0px;
+    margin:0%; 
+    padding: 0%;
+    width: 250px;
+
+    
 
 
 }
@@ -35,62 +100,3 @@ h1 {
 }
 
 
-#quiz {
-    text-indent: 20px;
-    display:none;
-}
-
-.button {
-    border:4px solid;
-    border-radius:5px;
-    width: 40px;
-    padding-left:5px;
-    padding-right: 5px;
-    position: relative;
-    float:right;
-    background-color: #DCDCDC;
-    color: black;
-    margin: 0 2px 0 2px;
-}
-
-.button.active {
-    background-color: #F8F8FF;
-    color: #525252;
-}
-
-button {
-    position: relative;
-    float:right;
-}
-
-.button a {
-    text-decoration: none;
-    color: black;
-}
-
-#container {
-    width:50%;
-    margin:auto;
-    padding: 0 25px 40px 10px;
-    background-color: black transparent;
-    
-    border-radius:1px;
-    color: #FFFFFF;
-    
-    
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#prev {
-    display:none;
-}
-
-#start {
-    display:none;
-    width: 90px;
-}
