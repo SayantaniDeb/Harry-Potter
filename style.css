@@ -166,10 +166,7 @@ height: 100vh;
 
 
 @media only screen and (max-width: 600px) {
-    :root{
-        
-
-    }
+    
     
     .bg {
       background-image: url(./images/hogwarts.jpg);

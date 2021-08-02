@@ -7,6 +7,7 @@
     <title>Treasure Hunt</title>
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <section class="bg">
@@ -20,19 +21,44 @@
         <button class="goback"><a href="./index.html"><i class="fas fa-home"></i></a></button> 
       </div>
       <audio
-      autoplay loop
+       loop
       src="memory.mp3" id="player">
           Your browser does not support the
            element.
     </audio>
 
-<h1>
-    move your wand around and look for the hidden objects!
-</h1>
-    <div>
+<section class="hunt">
+    <div class="token">
 
-        <img src="">
+        <img class="goblet" src="./images/goblet.png">
+    
+        
+        <img class="cup" src="./images/cup.png" alt="">
+        
+        <img class="sorted" src="./images/sorted.jpg" alt="">
+        <img class="coat" src="images/coat.png" alt="">
+        <img class="snitch" src="./images/snitch.png" alt="">
+        <img src="./images/gem.png" class="gem" alt="">
+
+
         </div>
+        <div class="secondhalf">
+        <img class="goblet" src="./images/goblet.png">
+    
+        
+        <img class="cup" src="./images/cup.png" alt="">
+        
+        <img class="sorted" src="./images/sorted.jpg" alt="">
+        <img class="coat" src="images/coat.png" alt="">
+        <img class="snitch" src="./images/snitch.png" alt="">
+        <img src="./images/gem.png" class="gem" alt="">
+
+
+
+       
+
+        </div>
+        </section>
             <script>
         function move(event){
             let X = event.clientX || event.touches[0].clientX;
