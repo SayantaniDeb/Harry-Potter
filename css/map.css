@@ -4,7 +4,7 @@
 }
 
 .bg{
-    background: url(./images/treasure.jpg) ;
+    background: url(../images/treasure.jpg) ;
     background-position: center;
     background-repeat: no-repeat;
 background-size: cover;
@@ -17,7 +17,7 @@ height: 100vh;
 }
 
 :root{
-    cursor: url("./images/cursor.png"),auto;
+    cursor: url("../images/cursor.png"),auto;
     --X:40vh;
     --Y:45vh;
 }

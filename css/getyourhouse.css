@@ -9,7 +9,7 @@
 }
 .bg {
     
-    background-image: url(./images/dine.jpg);
+    background-image: url(../images/dine.jpg);
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;

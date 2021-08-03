@@ -3,7 +3,7 @@
   padding: 0%;
 }
 .bg{
-  background-image: url(./images/way.jpg);
+  background-image: url(../images/way.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

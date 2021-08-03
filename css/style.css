@@ -4,7 +4,7 @@
 }
 
 .bg{
-    background: url(./images/meow.jpg) ;
+    background: url(../images/meow.jpg) ;
     background-position: center;
     background-repeat: no-repeat;
 background-size: cover;
@@ -106,7 +106,7 @@ height: 100vh;
 
   }
   :root{
-    cursor: url("./images/cursor.png"),auto;
+    cursor: url("../images/cursor.png"),auto;
     --X:40vh;
     --Y:45vh;
 }
@@ -169,7 +169,7 @@ height: 100vh;
     
     
     .bg {
-      background-image: url(./images/hogwarts.jpg);
+      background-image: url(../images/hogwarts.jpg);
     }
     .middle,.icons,.options{
         padding: 10px 0px;
