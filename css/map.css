@@ -1,6 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 *{
     margin: 0%;
     padding: 0%;
+    
+   
+}
+.wand{
+    background-color: azure;
+    text-align: center;
+    justify-content: center;
+    transition: transform .2s;
+    color: black;
+    font-family: 'Nova Square',cursive;
+
+}
+.wand:hover{
+    transform: scale(1.5);
+
 }
 
 .bg{
@@ -30,12 +46,12 @@ height: 100vh;
     background: radial-gradient(circle 10vmax at var(--X) var(--Y),
     rgba(0,0,0,0) 0%,
     rgba(0,0,0,0.8) 80%,
-    rgba(0,0,0,0.99) 100%);
+    rgba(0,0,0,0.79) 100%);
     pointer-events:none;
     
 }
 .goblet{
-    max-width: 25%;
+    max-width: 45%;
     display: flex;
     transition: transform .2s;
     margin-right: 35px;
@@ -43,21 +59,26 @@ height: 100vh;
 }
 .cup,.sorted,.snitch,.gem,.coat{
     margin: 20px 45px;
-    max-width: 30%;
+    max-width: 40%;
     
     display: flex;
     transition: transform .2s;
 }
-.token,.secondhalf{
-    max-width: 40%;
+.token,.second{
+    max-width: 30%;
     height: auto;
     height: auto;
     align-items: center;
-    margin: 20px 40px;
-    padding-top: 50px;
+    margin: 10px 40px;
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
 
+}
+.second{
+    padding-left: 450px;
+    padding-top: 0% !important;
+    margin: 0%;
 }
 .goblet:hover,.cup:hover,.sorted:hover,.snitch:hover,.gem:hover,.coat:hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
@@ -110,10 +131,37 @@ height: 100vh;
 
 
   @media only screen and (max-width: 600px){
+      .hunt{
+          display: flex;
+          flex-direction: row;
+          
+      }
+      .second{
+          display: flex;
+          flex-direction: column;
+          
+          
+          max-width: auto;
+          padding: 0%;
+          margin-top: 300px;
+      }
+      
+    
+      .token{
+          display: flex;
+          flex-direction: column;
+          max-width: 30%;
+      }
 
     .player{
         display: flex;
         flex-direction: row;
         width: auto;
+
+  }
+
+  :root::before{
+      display:none;
+
   }
 }
