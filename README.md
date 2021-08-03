@@ -15,14 +15,17 @@ Consists of three parts-
 https://user-images.githubusercontent.com/74983536/128004726-621922ec-0da7-44f0-a115-323c9c53a19b.mp4
 
 Memory Game:
+
 Swapping the cards and finding similar ones!
 
 
-Get Your House
+Get Your House:
+
 Consists a series of question and at the end accordindly you are placed in your respective house
 
 
-Treasure Hunt
+Treasure Hunt:
+
 Toggle around with your wand and find the hidden treasures in dark.
 
 ![favicon](https://user-images.githubusercontent.com/74983536/128006266-426d2da9-b975-4d66-9327-46d9fcb464aa.png)
