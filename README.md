@@ -1,7 +1,7 @@
-# Harry-Potter
+# Harry Potter
 
 
-EXPECTO PATRONUM!
+## EXPECTO PATRONUM!
 
 ![text](https://user-images.githubusercontent.com/74983536/128005620-f7f44ba5-14d7-4329-abe4-0da9c93137e1.png)
 
