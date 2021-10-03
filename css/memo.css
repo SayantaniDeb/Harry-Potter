@@ -1,8 +1,8 @@
-*{
+* {
   margin: 0%;
   padding: 0%;
 }
-.bg{
+.bg {
   background-image: url(../images/way.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -11,20 +11,18 @@
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
-    height: auto;
-    display: block;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  }
+}
 
-
-
-.h1 span{
-    margin-left: auto;
+.h1 span {
+  margin-left: auto;
   margin-right: auto;
   display: block;
   text-align: center;
@@ -32,76 +30,75 @@
   width: 50px;
   padding: 10px 50px;
   color: brown;
-
-
 }
-.player{
+.player {
   align-items: center;
   justify-content: center;
   margin-left: auto;
   width: 25%;
   height: max-content;
-  
 }
-.play,.pause,.volup,.voldown,.goback{
-  background-color:black;
+.play,
+.pause,
+.volup,
+.voldown,
+.goback {
+  background-color: black;
   box-shadow: rgb(224, 224, 40);
   color: gold;
   font-size: medium;
-  
+
   border: black;
   width: 15%;
   padding: 10px 10px;
   margin: 2px 4px;
   transition: transform 0.5s;
 }
-.play:hover,.pause:hover,.volup:hover,.voldown:hover,.goback:hover{
-transform: scale(1.0);
-background-color: rgb(206, 210, 233);
-color: black;
-
+.play:hover,
+.pause:hover,
+.volup:hover,
+.voldown:hover,
+.goback:hover {
+  transform: scale(1);
+  background-color: rgb(206, 210, 233);
+  color: black;
 }
-.play{
+.play {
   font-size: small;
   padding: 11px 10px;
-
 }
-.volup{
+.volup {
   padding: 10px 10px 10px 5px;
 }
-.voldown{
+.voldown {
   font-size: large;
   padding: 9px 10px;
-
 }
-.fa-home{
+.fa-home {
   text-decoration: none;
   color: gold;
 }
 
-
-
 @media only screen and (max-width: 600px) {
-    
-    #result{
-      padding: 500px 50px;
-    }
-    
-  
-  .play,.pause,.volup,.voldown{
-    padding: 15px 20px;
-
+  #result {
+    padding: 500px 50px;
   }
-  .button{
+
+  .play,
+  .pause,
+  .volup,
+  .voldown {
+    padding: 15px 20px;
+  }
+  .button {
     width: 100px;
     padding: 15px 0px;
     margin: 4px 2px;
     font-size: small;
-}
-.player{
+  }
+  .player {
     display: flex;
     flex-direction: row;
     width: auto;
   }
-  
 }

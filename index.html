@@ -1,92 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harry Potter</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-   
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <section class="bg">
-    <div class="player"> 
-        <button class="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
-        <button class="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
-        <button class="volup" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
-        <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
+      <div class="player">
+        <button class="play" onclick="document.getElementById('player').play()">
+          <i class="fas fa-play"></i>
+        </button>
+        <button
+          class="pause"
+          onclick="document.getElementById('player').pause()"
+        >
+          <i class="fas fa-pause"></i>
+        </button>
+        <button
+          class="volup"
+          onclick="document.getElementById('player').volume += 0.1"
+        >
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button
+          class="voldown"
+          onclick="document.getElementById('player').volume -= 0.1"
+        >
+          <i class="fas fa-volume-down"></i>
+        </button>
       </div>
-      <audio  autoplay loop  id="player"
-      src="audio/harry_potter_theme.mp3"> Your browser does not support the
-      element.
-    </audio>
-      
-      
+      <audio autoplay loop id="player" src="audio/harry_potter_theme.mp3">
+        Your browser does not support the element.
+      </audio>
 
+      <img src="./images/text.png" alt="Harry Potter" class="text" />
 
-        <img src="./images/text.png" alt="Harry Potter" class="text">
-
-       
-
-       
-            
-    <div class="middle">
-
-<div class="icons">
-        <img src="./images/memo.png" class="token memo" alt="Pensieve">
-        <button class="button"> 
-
+      <div class="middle">
+        <div class="icons">
+          <img src="./images/memo.png" class="token memo" alt="Pensieve" />
+          <button class="button">
             <a href="memo.html">Memory Game</a>
-       
-    
-</button> 
-</div>
+          </button>
+        </div>
         <div class="options">
-            <img src="./images/badge.png" class="token">
-        
+          <img src="./images/badge.png" class="token" />
 
-<button class="button"> 
-    <a href="getyourhouse.html">Get your House</a>
+          <button class="button">
+            <a href="getyourhouse.html">Get your House</a>
+          </button>
+        </div>
+        <div class="options">
+          <img src="./images/map.png" class="token" />
 
-    
+          <button class="button">
+            <a href="map.html">Treasure Hunt</a>
+          </button>
+        </div>
+      </div>
 
+      <script>
+        function move(event) {
+          let X = event.clientX || event.touches[0].clientX;
+          let Y = event.clientY || event.touches[0].clientY;
+          document.documentElement.style.setProperty("--X", X + "px");
+          document.documentElement.style.setProperty("--Y", Y + "px");
+        }
 
-</button>
-</div> 
-<div class="options">
-    <img src="./images/map.png" class="token">
-
-
-<button class="button"> 
-<a href="map.html">Treasure Hunt</a>
-
-
-
-
-</button>
-</div> 
-
-
-
-</div>
-
-<script>
-    function move(event){
-        let X = event.clientX || event.touches[0].clientX;
-        let Y = event.clientY || event.touches[0].clientY;
-        document.documentElement.style.setProperty('--X',X+'px');
-        document.documentElement.style.setProperty('--Y',Y+'px');
-    }
-
-    document.addEventListener('mousemove',move);
-    document.addEventListener('touchpad',move);
-</script>
-    
-
-  </section>  
-
- 
-</body>
+        document.addEventListener("mousemove", move);
+        document.addEventListener("touchpad", move);
+      </script>
+    </section>
+  </body>
 </html>

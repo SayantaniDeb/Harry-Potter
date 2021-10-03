@@ -1,396 +1,475 @@
 <html>
-<head>
- <meta charset="UTF-8">
- <link rel='shortcut icon' type='image/x-icon' href='/~mi372871/dig4503/assignments/assignment02/img/favicon.jpg' />
- <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/~mi372871/dig4503/assignments/assignment02/img/favicon.jpg"
+    />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
- <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/pure-min.css">
- <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
- <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-<link rel="stylesheet" href="css/all.min.css">
- <style>
-     @import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+    <link
+      rel="stylesheet"
+      href="https://yui.yahooapis.com/pure/0.6.0/pure-min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
 
-@font-face {
-    font-family: 'harryp';
-    src: url('harryp-webfont.eot');
-    src: url('harryp-webfont.eot?#iefix') format('embedded-opentype'),
-         url('harryp-webfont.woff2') format('woff2'),
-         url('harryp-webfont.woff') format('woff'),
-         url('harryp-webfont.ttf') format('truetype'),
-         url('harryp-webfont.svg#harry_pregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+      @font-face {
+        font-family: "harryp";
+        src: url("harryp-webfont.eot");
+        src: url("harryp-webfont.eot?#iefix") format("embedded-opentype"),
+          url("harryp-webfont.woff2") format("woff2"),
+          url("harryp-webfont.woff") format("woff"),
+          url("harryp-webfont.ttf") format("truetype"),
+          url("harryp-webfont.svg#harry_pregular") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-}
+      /* Defaults */
+      html,
+      body,
+      #quizzie {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-/* Defaults */
-html, body, #quizzie {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-* {
-  box-sizing: border-box;
-}
+      body {
+        background: rgba(39, 26, 26, 0.714) url(./images/sorting.jpg);
+        background-blend-mode: darken;
 
-body {
-    background: rgba(39, 26, 26, 0.714) url(./images/sorting.jpg) ;
-    background-blend-mode: darken;
-    
-    background-attachment: fixed;
-    background-repeat: no-repeat;;
-    background-position: center;
-    color: #fff;
-    background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #fff;
+        background-size: cover;
+      }
 
-}
+      h1 {
+        font-family: "harryp";
+        font-size: 5.5em;
+        letter-spacing: 0.04em;
+        text-shadow: 2px 2px #000;
+        color: #d3a625;
+      }
 
-h1 {
-  font-family: 'harryp';
-  font-size: 5.5em;
-  letter-spacing: .04em;
-  text-shadow: 2px 2px #000;
-  color: #d3a625;
-}
+      h2 {
+        text-shadow: 2px 2px #d3a625;
+        letter-spacing: 0.02em;
+      }
 
-h2 {
- text-shadow: 2px 2px #d3a625;
- letter-spacing: .02em;
- 
-}
+      h2,
+      p {
+        font-size: 2em;
+        text-shadow: 1px 1px gold;
+        color: white;
+      }
 
-h2, p {
-  
-  font-size: 2em;
-  text-shadow: 1px 1px gold;
-	color: white;
-}
+      h1,
+      h2,
+      p {
+        text-align: center;
+        display: block;
+        width: auto;
+        margin: 1%;
+      }
+      .player {
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 25%;
+        height: max-content;
+      }
+      .play,
+      .pause,
+      .volup,
+      .voldown,
+      .goback {
+        background-color: black;
+        box-shadow: rgb(224, 224, 40);
+        color: gold;
+        font-size: medium;
 
-h1, h2, p {
-  text-align: center;
-  display: block;
-  width: auto;
-  margin: 1%;
-}
-.player{
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  width: 25%;
-  height: max-content;
-  
-}
-.play,.pause,.volup,.voldown,.goback{
-  background-color:black;
-  box-shadow: rgb(224, 224, 40);
-  color: gold;
-  font-size: medium;
-  
-  border: black;
-  width: 15%;
-  padding: 10px 10px;
-  margin: 2px 4px;
-  transition: transform 0.5s;
-}
-.play:hover,.pause:hover,.volup:hover,.voldown:hover,.goback:hover{
-transform: scale(1.0);
-background-color: rgb(206, 210, 233);
-color: black;
+        border: black;
+        width: 15%;
+        padding: 10px 10px;
+        margin: 2px 4px;
+        transition: transform 0.5s;
+      }
+      .play:hover,
+      .pause:hover,
+      .volup:hover,
+      .voldown:hover,
+      .goback:hover {
+        transform: scale(1);
+        background-color: rgb(206, 210, 233);
+        color: black;
+      }
+      .play {
+        font-size: small;
+        padding: 11px 10px;
+      }
+      .volup {
+        padding: 10px 10px 10px 5px;
+      }
+      .voldown {
+        font-size: large;
+        padding: 9px 10px;
+      }
+      .fa-home {
+        text-decoration: none;
+        color: gold;
+      }
 
-}
-.play{
-  font-size: small;
-  padding: 11px 10px;
+      #quizzie {
+        padding: 5% 0;
+      }
 
-}
-.volup{
-  padding: 10px 10px 10px 5px;
-}
-.voldown{
-  font-size: large;
-  padding: 9px 10px;
+      #quizzie ul {
+        list-style: none;
+        display: block;
+        width: auto;
+        margin: 2% 2%;
+        padding: 2%;
+        overflow: auto;
+        display: none;
+      }
 
-}
-.fa-home{
-    text-decoration: none;
-    color: gold;
-}
+      #quizzie ul.current {
+        display: block;
+      }
 
-#quizzie {
-  padding: 5% 0;
-}
+      #quizzie ul li {
+        display: inline-block;
+        float: left;
+        width: 49%;
+        margin-right: 2%;
+        overflow: auto;
+        text-align: center;
+      }
 
-#quizzie ul {
-  list-style: none;
-  display: block;
-  width: auto;
-  margin: 2% 2%;
-  padding: 2%;
-  overflow: auto;
-  display: none;
-}
+      #quizzie ul li.quiz-answer {
+        cursor: pointer;
+      }
 
-#quizzie ul.current {
-  display: block;
-}
+      #quizzie ul li.question,
+      #quizzie ul li.results-inner {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 2%;
+      }
 
-#quizzie ul li {
-  display: inline-block;
-  float: left;
-  width: 49%;
-  margin-right: 2%;
-  overflow: auto;
-  text-align: center;
-}
+      #quizzie ul li.results-inner {
+        padding: 5% 2%;
+      }
 
-#quizzie ul li.quiz-answer {
-  cursor: pointer;
-}
+      #quizzie ul li:last-child {
+        margin-right: 0;
+      }
 
-#quizzie ul li.question, #quizzie ul li.results-inner {
-  display: block;
-  float: none;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 2%;
-}
+      #quizzie .question-wrap,
+      #quizzie .answer-wrap {
+        display: block;
+        padding: 1%;
+        margin: 1em 10%;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 20px;
+      }
 
-#quizzie ul li.results-inner {
-  padding: 5% 2%;
-}
+      #quizzie .answer-wrap {
+        background: #d3a625;
+        -moz-transition: background-color 0.5s ease;
+        -o-transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+        transition: background-color 0.5s ease;
+      }
 
-#quizzie ul li:last-child {
-  margin-right: 0;
-}
+      #quizzie .answer-wrap:hover {
+        background: #ae0001;
+        color: aliceblue;
+      }
+    </style>
 
-#quizzie .question-wrap, #quizzie .answer-wrap {
-  display: block;
-  padding: 1%;
-  margin: 1em 10%;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 20px;
-}
+    <title>House Quiz</title>
+  </head>
 
-#quizzie .answer-wrap {
-  background: #d3a625;
-  -moz-transition: background-color 0.5s ease;
-  -o-transition: background-color 0.5s ease;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-}
+  <body>
+    <div class="player">
+      <button class="play" onclick="document.getElementById('player').play()">
+        <i class="fas fa-play"></i>
+      </button>
+      <button class="pause" onclick="document.getElementById('player').pause()">
+        <i class="fas fa-pause"></i>
+      </button>
+      <button
+        class="volup"
+        onclick="document.getElementById('player').volume += 0.1"
+      >
+        <i class="fas fa-volume-up"></i>
+      </button>
+      <button
+        class="voldown"
+        onclick="document.getElementById('player').volume -= 0.1"
+      >
+        <i class="fas fa-volume-down"></i>
+      </button>
+      <button class="goback">
+        <a href="./index.html"><i class="fas fa-home"></i></a>
+      </button>
+    </div>
+    <audio autoplay loop id="player" src="home.mp3"></audio>
 
-#quizzie .answer-wrap:hover {
-  background: #ae0001;
-  color: aliceblue;
-
-    }
-    
-
-    
-
-
-     </style>
-
-
- <title>House Quiz</title>
-</head>
-
-<body>
-    <div class="player"> 
-        <button class="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
-        <button class="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
-        <button class="volup" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
-        <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
-        <button class="goback"><a href="./index.html"><i class="fas fa-home"></i></a></button> 
-      </div>
-      <audio  autoplay loop  id="player"
-      src="home.mp3"></audio>
-
-<div id="quizzie">
-  <h1> Hogwarts Sorting Hat Quiz </h1>
-    <ul class="quiz-step step1 current">
+    <div id="quizzie">
+      <h1>Hogwarts Sorting Hat Quiz</h1>
+      <ul class="quiz-step step1 current">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #1: There is a three-headed dog between you and your best friend, what do you do next?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #1: There is a three-headed dog between you and your best
+              friend, what do you do next?
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Try to take on the dog myself, distracting it's view from my friend.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Try to take on the dog myself, distracting it's view from my
+              friend.
+            </p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text"> I use my exceptional broom flying skills to zoom past the dog - leaving my friend in despair.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              I use my exceptional broom flying skills to zoom past the dog -
+              leaving my friend in despair.
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step2">
+      </ul>
+      <ul class="quiz-step step2">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #2: You find yourself standing at a mysterious locked door, what do you do?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #2: You find yourself standing at a mysterious locked
+              door, what do you do?
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Leave the door alone and act like it doesn't exist.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Leave the door alone and act like it doesn't exist.
+            </p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Come back later when no one is around and try to find your way through it.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Come back later when no one is around and try to find your way
+              through it.
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step3">
+      </ul>
+      <ul class="quiz-step step3">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #3: Where do you see yourself working?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>Question #3: Where do you see yourself working?</h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">In a warm, dry library.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">In a warm, dry library.</p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Alone in a cold, dark dungeon.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">Alone in a cold, dark dungeon.</p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step4">
+      </ul>
+      <ul class="quiz-step step4">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #4: If you had to choose one potion to use for the rest of your life, which would it be?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #4: If you had to choose one potion to use for the rest
+              of your life, which would it be?
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Elixir to Induce Euphoria - A potion that induces a sense of inexplicable, irrational happiness upon the drinker.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Elixir to Induce Euphoria - A potion that induces a sense of
+              inexplicable, irrational happiness upon the drinker.
+            </p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Forgetfulness Potion - A potion that makes the taker overly forgetful.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Forgetfulness Potion - A potion that makes the taker overly
+              forgetful.
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step5">
+      </ul>
+      <ul class="quiz-step step5">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #5: You have a big exam tomorrow, how do you prepare?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #5: You have a big exam tomorrow, how do you prepare?
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Study profusely and don't sleep at all.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">Study profusely and don't sleep at all.</p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Do nothing.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">Do nothing.</p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step6">
+      </ul>
+      <ul class="quiz-step step6">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #6: While shopping in Diagon Alley you realize you were undercharged when purchasing a wand from Ollivanders. What do you do?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #6: While shopping in Diagon Alley you realize you were
+              undercharged when purchasing a wand from Ollivanders. What do you
+              do?
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Return to Ollivanders and give Mr. Garrick the difference. </p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Return to Ollivanders and give Mr. Garrick the difference.
+            </p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Keep the money - use it for Bertie Bott's Beans. </p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Keep the money - use it for Bertie Bott's Beans.
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step7">
+      </ul>
+      <ul class="quiz-step step7">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #7: Choose one of the following pets for a companion:</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #7: Choose one of the following pets for a companion:
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">An owl - bird of prey.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">An owl - bird of prey.</p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">A Cat - a domesticated creature for both Wizards and Muggles.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              A Cat - a domesticated creature for both Wizards and Muggles.
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step8">
+      </ul>
+      <ul class="quiz-step step8">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #8: If you could bring back memories with one smell, what would it be? </h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #8: If you could bring back memories with one smell, what
+              would it be?
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">The smell of a delicious, large pepperoni pizza.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              The smell of a delicious, large pepperoni pizza.
+            </p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">The putrid smell of sweaty feet.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">The putrid smell of sweaty feet.</p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step9">
+      </ul>
+      <ul class="quiz-step step9">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #9: Your close friend is being held by Death Eaters in the basement dungeon of the Malfoy mansion. You:</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>
+              Question #9: Your close friend is being held by Death Eaters in
+              the basement dungeon of the Malfoy mansion. You:
+            </h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Gather together Dumbledore's Army and prepare to fight your way through the dungeon.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Gather together Dumbledore's Army and prepare to fight your way
+              through the dungeon.
+            </p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Leave your friend to be devoured by the Death Eaters.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Leave your friend to be devoured by the Death Eaters.
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul class="quiz-step step10">
+      </ul>
+      <ul class="quiz-step step10">
         <li class="question">
-            <div class="question-wrap">
-                <h2>Question #10: Severus Snape: Friend or Foe?</h2>
-            </div>
+          <div class="question-wrap">
+            <h2>Question #10: Severus Snape: Friend or Foe?</h2>
+          </div>
         </li>
         <li class="quiz-answer low-value" data-quizIndex="2">
-            <div class="answer-wrap">
-                <p class="answer-text">Foe: Snape has always disliked Harry.</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">Foe: Snape has always disliked Harry.</p>
+          </div>
         </li>
         <li class="quiz-answer high-value" data-quizIndex="4">
-            <div class="answer-wrap">
-                <p class="answer-text">Friend: Dumbledore had no doubt that Snape was trustworthy</p>
-            </div>
+          <div class="answer-wrap">
+            <p class="answer-text">
+              Friend: Dumbledore had no doubt that Snape was trustworthy
+            </p>
+          </div>
         </li>
-    </ul>
-    <ul id="results">
+      </ul>
+      <ul id="results">
         <li class="results-inner">
-            <p>Your result is:</p>
-            <p class="desc"></p>
+          <p>Your result is:</p>
+          <p class="desc"></p>
         </li>
-    </ul>
-</div>
-<script src="scripts/game.js"></script>
-
-</body>
+      </ul>
+    </div>
+    <script src="scripts/game.js"></script>
+  </body>
 </html>
