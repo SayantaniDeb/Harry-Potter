@@ -1,83 +1,76 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-.bg{
-    background: url(../images/meow.jpg) ;
-    background-position: center;
-    background-repeat: no-repeat;
-background-size: cover;
-height: 100vh;
-
-
+.bg {
+  background: url(../images/meow.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
-.box
-{
-    display: flex;
-    max-width: 250px;
-    height: auto;
+.box {
+  display: flex;
+  max-width: 250px;
+  height: auto;
 }
-.icons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.icons img{
-    max-width: 40%;
+.icons img {
+  max-width: 40%;
 }
-.options{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.middle{
-    text-align: center;
-    margin: auto;
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    
+.middle {
+  text-align: center;
+  margin: auto;
+  display: flex;
 
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 
-.text{
-    width: 700px;
-    
-    align-items: center;
-    transition: transform .2s;
-    text-align: center;
-    margin: auto;
-    display: flex;
-    padding: 0px 0px;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    
+.text {
+  width: 700px;
 
+  align-items: center;
+  transition: transform 0.2s;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
 }
 .text:hover {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
-.token{
-    max-width: 50%;
-    height: auto;
-    align-items: center;
-    transition: transform .2s;
-    padding-top: 50px;
-
+.token {
+  max-width: 50%;
+  height: auto;
+  align-items: center;
+  transition: transform 0.2s;
+  padding-top: 50px;
 }
 .token:hover {
-    transform: scale(0.9); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+  transform: scale(
+    0.9
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
-.button{
-    background-color: rgb(224, 224, 40);
+.button {
+  background-color: rgb(224, 224, 40);
   border: none;
   color: white;
   padding: 15px 12px;
@@ -85,134 +78,125 @@ height: 100vh;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 800;
   margin: 10px 20px;
   cursor: pointer;
-  transition: transform .2s;
+  transition: transform 0.2s;
   margin: 20px 0px;
   max-width: 50%;
   align-items: center;
-}  
-.button a{
-      text-decoration: none;
-      color: black;
-      
-  }
-
-  .button:hover{
-    transform: scale(1.0);
-    background-color: silver;
-
-  }
-  :root{
-    cursor: url("../images/cursor.png"),auto;
-    --X:40vh;
-    --Y:45vh;
 }
-:root::before{
-    content: '';
-    display: block;
-    height:100%;
-    width: 100%;
-    position: fixed;
-    background: radial-gradient(circle 10vmax at var(--X) var(--Y),
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.8) 80%,
-    rgba(0,0,0,0.75) 100%);
-    pointer-events:none;
+.button a {
+  text-decoration: none;
+  color: black;
 }
 
-.player{
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    width: 25%;
-    height: max-content;
-    
+.button:hover {
+  transform: scale(1);
+  background-color: silver;
 }
-.play,.pause,.volup,.voldown{
-    background-color:black;
-    box-shadow: rgb(224, 224, 40);
-    color: gold;
-    font-size: medium;
-    border: black;
-    width: 15%;
-    padding: 10px 10px;
-    margin: 2px 4px;
-    transition: transform 0.5s;
+:root {
+  cursor: url("../images/cursor.png"), auto;
+  --X: 40vh;
+  --Y: 45vh;
 }
-.play:hover,.pause:hover,.volup:hover,.voldown:hover{
-    transform: scale(1.0);
-    background-color: rgb(206, 210, 233);
-    color: black;
-    
-    }
-.play{
-    font-size: small;
-    padding: 11px 10px;
-
-}
-.volup{
-    padding: 10px 10px 10px 5px;
-}
-.voldown{
-    font-size: large;
-    padding: 9px 10px;
-
+:root::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: radial-gradient(
+    circle 10vmax at var(--X) var(--Y),
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  pointer-events: none;
 }
 
-
-
+.player {
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 25%;
+  height: max-content;
+}
+.play,
+.pause,
+.volup,
+.voldown {
+  background-color: black;
+  box-shadow: rgb(224, 224, 40);
+  color: gold;
+  font-size: medium;
+  border: black;
+  width: 15%;
+  padding: 10px 10px;
+  margin: 2px 4px;
+  transition: transform 0.5s;
+}
+.play:hover,
+.pause:hover,
+.volup:hover,
+.voldown:hover {
+  transform: scale(1);
+  background-color: rgb(206, 210, 233);
+  color: black;
+}
+.play {
+  font-size: small;
+  padding: 11px 10px;
+}
+.volup {
+  padding: 10px 10px 10px 5px;
+}
+.voldown {
+  font-size: large;
+  padding: 9px 10px;
+}
 
 @media only screen and (max-width: 600px) {
-    
-    
-    .bg {
-      background-image: url(../images/hogwarts.jpg);
-    }
-    .middle,.icons,.options{
-        padding: 10px 0px;
-        max-width: fit-content;
-        
-    }
-    .middle{
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 0%;
-
-    }
-    .token{
-        max-width: 60px;
-        padding: 0px 0px;
-        
-    }
-    .icons{
-        max-width: 100%;
-    }
-
-        
-    
-    .text{
-        max-width: 550px;
-        padding: 20px 0px;
-        max-width: fit-content;
-        
-
-    }
-    .button{
-        width: 100px;
-        padding: 5px 0px;
-        margin: 4px 50px;
-        font-size: small;
-    }
-    .player{
-        display: flex;
-        flex-direction: row;
-        width: auto;
-    }
-:root::before{
-    display: none;
-}
-
+  .bg {
+    background-image: url(../images/hogwarts.jpg);
   }
+  .middle,
+  .icons,
+  .options {
+    padding: 10px 0px;
+    max-width: fit-content;
+  }
+  .middle {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0%;
+  }
+  .token {
+    max-width: 60px;
+    padding: 0px 0px;
+  }
+  .icons {
+    max-width: 100%;
+  }
+
+  .text {
+    max-width: 550px;
+    padding: 20px 0px;
+    max-width: fit-content;
+  }
+  .button {
+    width: 100px;
+    padding: 5px 0px;
+    margin: 4px 50px;
+    font-size: small;
+  }
+  .player {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+  :root::before {
+    display: none;
+  }
+}
