@@ -16,17 +16,17 @@ https://user-images.githubusercontent.com/74983536/128004726-621922ec-0da7-44f0-
 
 Memory Game:
 
-Swapping the cards and finding similar ones!
+Click the cards to flip them. Find all the matching images and you win!
 
 
 Get Your House:
 
-Consists a series of question and at the end accordindly you are placed in your respective house
+Consists of a series of situational questions. At the end of the quiz you are sorted accordingly to your respective house.
 
 
 Treasure Hunt:
 
-Toggle around with your wand and find the hidden treasures in dark.
+Wave your wand around to find the treasures hidden in the dark.
 
 ![favicon](https://user-images.githubusercontent.com/74983536/128006266-426d2da9-b975-4d66-9327-46d9fcb464aa.png)
 
