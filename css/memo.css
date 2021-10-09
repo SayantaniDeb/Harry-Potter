@@ -62,6 +62,7 @@
   transform: scale(1);
   background-color: rgb(206, 210, 233);
   color: black;
+  cursor: pointer;
 }
 .play {
   font-size: small;
