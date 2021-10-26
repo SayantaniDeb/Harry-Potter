@@ -7,7 +7,7 @@
   font-family: "Nova Square", cursive;
 }
 .bg {
-  background-image: url(../images/dine.jpg);
+  background-image: url(../images/hall.png);
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
@@ -24,6 +24,7 @@ h1 {
   font-size: 4.2rem;
   margin-bottom: 4 rem;
 }
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -73,6 +74,7 @@ h1 {
 .btn:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgb(241, 210, 30);
+  font-weight: bold;
   transition: transform 150ms;
   transform: scale(1.03);
 }
