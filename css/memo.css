@@ -76,7 +76,7 @@
 }
 .fa-home {
   text-decoration: none;
-  color: gold;
+  color: rgb(253, 215, 0);
 }
 
 @media only screen and (max-width: 600px) {
@@ -94,7 +94,10 @@
     width: 100px;
     padding: 15px 0px;
     margin: 4px 2px;
-    font-size: small;
+    font-size: medium;
+    border-radius: 4px;
+    
+
   }
   .player {
     display: flex;
